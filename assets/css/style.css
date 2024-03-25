@@ -1,0 +1,29 @@
+:root{
+    --background-color: midnightblue;
+    --main-color: white;
+    --secondary-color: purple;
+}
+
+header {
+   margin: 2% 0;  
+}
+
+h1 {
+   color: var(--secondary-color);
+   text-align: center;
+   font-size: 200%;
+}
+
+header p{
+   margin: 1%;
+   color var(--main-color);
+   font-size: 100%;
+   text-align: center;
+}
+
+footer {
+   color: var(--secondary-color);
+   font-size: 150%;
+   text-align: center;
+   margin-bottom: 1%;
+}
