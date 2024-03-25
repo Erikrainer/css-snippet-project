@@ -1,17 +1,27 @@
 :root{
-    --background-color: midnightblue;
+    --background-color: rgba(77, 73, 73, 0.377);
     --main-color: white;
-    --secondary-color: purple;
+    --secondary-color: #a512a5;
+    --font-primary: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-secondary: Arial, Helvetica, sans-serif;
+    --black: black;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 1.5rem;
 }
 
 header {
-   margin: 2% 0;  
+   margin: 0 auto;  
+   padding: 2rem;
+   text-align: center;
 }
 
 h1 {
    color: var(--secondary-color);
-   text-align: center;
    font-size: 200%;
+   font-family: var(--font-primary);
 }
 
 header p{
@@ -19,11 +29,69 @@ header p{
    color var(--main-color);
    font-size: 100%;
    text-align: center;
+   font-family: var(--font-secondary);
 }
 
-footer {
-   color: var(--secondary-color);
-   font-size: 150%;
-   text-align: center;
-   margin-bottom: 1%;
+main {
+    margin: 2rem auto;
+    width: 95%;
 }
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row center;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+.code-image {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    min-height: 100%;
+    outline: 2px dashed var(--black);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-box {
+    padding: 2rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    flex: 1 0 100%;
+}
+
+.code-title {
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    border-radius: 8px;
+    border: 2px solid black;
+    padding: .5rem 1rem;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    font-family: var(--font-primary);
+    transition: all 0.5s ease-in-out;
+}
+
+
+.code-code {
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    display: flex; 
+    align-items: center;
+}
+
+.code-code pre:active {
+    user-select: all;
+  }
+
+
+footer {
+    text-align: center;
+    margin: 1.5rem;
+}
+
